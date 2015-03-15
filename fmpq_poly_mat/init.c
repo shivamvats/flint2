@@ -13,7 +13,7 @@ void fmpq_poly_mat_init(fmpq_poly_mat_t A, slong rows, slong cols)
        A->rows = (fmpq_poly_struct **) flint_malloc(rows * sizeof(fmpq_poly_struct *));
 
        for (i = 0; i < rows * cols; i++)
-           fmpq_poly_init(A->enties + i);
+           fmpq_poly_init(A->entries + i);
 
        for (i = 0; i < rows; i++)
            A->rows[i] = A->entries + i * cols;

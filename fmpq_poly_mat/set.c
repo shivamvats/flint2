@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "flint.h"
-#include "fmpz_poly.h"
-#include "fmpz_poly_mat.h"
+#include "fmpq_poly.h"
+#include "fmpq_poly_mat.h"
 
 void fmpq_poly_mat_set(fmpq_poly_mat_t B, const fmpq_poly_mat_t A)
 {
