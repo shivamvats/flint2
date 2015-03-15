@@ -19,23 +19,27 @@ typedef fmpq_poly_mat_struct fmpq_poly_mat_t[1];
 
 FLINT_DLL void fmpq_poly_mat_init(fmpq_poly_mat_t mat, slong rows, slong cols);
 
-FLINT_DLL void fmpq_poly_mat_init_set(fmpq_poly_mat_t mat, const fmpq_poly_mat_t src);
+//FLINT_DLL void fmpq_poly_mat_init_set(fmpq_poly_mat_t mat, const fmpq_poly_mat_t src);
 
 FLINT_DLL void fmpq_poly_set(fmpq_poly_mat_t mat1, const fmpq_poly_mat_t mat2);
 
 FLINT_DLL void fmpq_poly_mat_clear(fmpq_poly_mat_t mat);
 
+FLINT_DLL void fmpq_poly_mat_add(fmpq_poly_mat_t C, const fmpq_poly_mat_t A, const fmpq_poly_mat_t B);
+
+FLINT_DLL void fmpq_poly_mat_sub(fmpq_poly_mat_t C, const fmpq_poly_mat_t A, const fmpq_poly_mat_t B);
+
 **********
 
 
 static __inline__ slong
-fmpz_poly_mat_nrows(const fmpz_poly_mat_t mat)
+fmpq_poly_mat_nrows(const fmpq_poly_mat_t mat)
 {
     return mat->r;
 }
 
 static __inline__ slong
-fmpz_poly_mat_ncols(const fmpz_poly_mat_t mat)
+fmpq_poly_mat_ncols(const fmpq_poly_mat_t mat)
 {
     return mat->c;
 }
